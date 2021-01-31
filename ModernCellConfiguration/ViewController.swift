@@ -24,6 +24,7 @@ class ViewController: UIViewController {
 }
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
+    // MARK: - UITableViewDelegate, UITableViewDatasource
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }
@@ -32,7 +33,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 10
     }
     
-    // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: self.headerFooterViewReuseIdentifier)
         var content = view?.defaultContentConfiguration()
